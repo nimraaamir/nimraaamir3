@@ -12,6 +12,16 @@
         x.style.display = "none";
         }
     }
+    function contact(cm) {
+        var x = document.getElementById("cm");
+        var audio = document.getElementById("audio");
+        audio.play();
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
     function skill(skills) {
         var x = document.getElementById("skills");
         var audio = document.getElementById("audio");
@@ -113,8 +123,10 @@
         transition-duration: 0.5s;
         text-align: center;
         font-size: 16px;
-    }
 
+    }
+   
+ 
     .btn1 {
         background-color: #CF4D7A;
     }
@@ -148,7 +160,12 @@
     .btn4 {
         background-color: #CFAF4D;
     }
-
+    .btn6 {
+        background-image: url('fb.png');
+    }
+    .btn7 {
+        background-image: url('gmail.jpg');
+    }
     .button:hover {
         background-color: white;
         color: black;
@@ -158,8 +175,26 @@
         width: 20%;
         height: 40%;
     }
+    .btn5 {
+        background-color: blue;
+        animation-name: check;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes check {
+        from {
+            background-color: blue;
+            height:50%;
+            width:40%;
 
+           background-image: url('fb.png');
+        }
 
+        to {
+            background-color: cornflowerblue;
+            background-image: url('gmail.png');
+        }
+    }
 
     #projects {
         width: 100%;
@@ -224,7 +259,12 @@
             <!--</article>
             <article>-->
                 <button class="btn3 button" onclick="language(lang)">Languages</button>
+            
             <div id="lang" style="display:none;">
+                <br />
+                <br />
+                <br />
+                <br />
                 <table width="500" border="10" height="100" bgcolor="EEDCD9" vertical-align:middle BORDERCOLOR="#595858" BORDERCOLORLIGHT="#FCF7F7" BORDERCOLORDARK="#A9A9A9">
                     <tr>
                         <td>English</td>
@@ -246,6 +286,7 @@
             </div>
             <!--</article>
             <article>-->
+
                 <button class="btn4 button" onclick="Quali(Q)"> Qualifications </button>
             <div id="Q" style="display:none;">
                 <ul style="list-style-type:circle">
@@ -262,8 +303,16 @@
                         Kinnard College For Women Lahore, Pakistan.
                     </li>
                     </ul>
+                </div>
+                <button class="btn5 button " onclick="contact(cm)"> Contact me </button>
+            <div id="cm" style="display:none;">
+                <form>
+                    <input class="btn6 button " type="button" onClick="https://www.facebook.com/nimra.aamir660"> Contact me </input>
+                </form>
+                    <button class="btn7 button " onclick="contatc(cm)"> Contact me </button>
+                </div>
                 <audio id="audio" src="16988_1461335349.mp3" type="audio/mpeg" />
-            </div>
+
                 <!--</article>-->
                 <!--</div>-->
 </section>
