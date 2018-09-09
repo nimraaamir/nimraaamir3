@@ -1,80 +1,118 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    header {
+        background-color: #FF360B;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+
+ footer {
+      background-color: #FF6F50;
+      color: white;
+      padding: 15px;
+    }
+    img {
+        border-radius: 50%;
+        border-color:black;
+        border-style:groove;
+        border-width:2px;
+        height:350px;
+    }
+    s:hover {
+        background-color: #FF6F50;
+    }
+    .img:hover {
+        background-color: #FFFAF9;
+        border-color: #FD3507;
+        border-style: groove;
+    }
+
+    section {
+        display: -webkit-flex;
+        display: flex;
+        background-color: #FF360B;
+    }
+
+
+    article {
+        -webkit-flex: 8;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #FFEDED;
+        padding: 10px;
+    }
+
+    .button {
+        border: none;
+        color: white;
+        padding: 30px;
+        text-decoration: none;
+        display: flex;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        height: 30%;
+        width: 10%;
+        border-radius: 50%;
+        text-align: center;
+        transition-duration: 0.5s;
+        text-align: center;
+        font-size: 16px;
+    }
+    .btn1 {
+        color: #E9443D;
+    }
+    .btn2 {
+        color: aqua;
+      
+    }
+    .btn3 {
+        color: #B051EE;
+        
+    }
+    .btn4 {
+        color: #CFAF4D;
+    }
+    .button:hover {
+        background-color: white;
+        color: black;
+        border: 3px solid #FD160B;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        align-content:center;
+        width:20%;
+        height:40%;
+    }
+    * {
+        box-sizing: border-box;
+    }
  
-<head>
-    </head>
- <body bgcolor="FCF5F4">
- 
-  <div background-color: lightblue >
-     <hr>
-   <p ALIGN=RIGHT> Nimra Aamir </p>
- <p ALIGN=RIGHT> nimraaamir660@gmail.com </p>
-      <div>
-   <img src="image1.JPG"  height="120" width="150" align="right" class="w3-circle">
-      </div>
-<br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-   <br>
-    <hr>
-    <h2 style="color:Gray"> Skills </h2>
-      <ul style="list-style-type:circle">
-       <li>SQL </li> 
-       <li>JAVA SCRIPT</li>
-        <li>JAVA</li>
-        <li>C++</li>
-        <li>C</li>
-         <li>Windows and Linux</li>
-               <li>ASP.NET</li>
-                   <li>Assembly language</li>
-                       <li>excellent problem-solving abilities</li>
-          <li>fast learner </li>
-      </ul>
-          </p>
-    <hr>
-    <h2 style="color:Gray"> Projects </h2>
-    <p>
-        <ul style="list-style-type:circle">
-   <li>Created applications similar to notepad and paint in C++.</li> 
-    <li>Designed a website using PHP for online clothing with database using SQL.</br></li> 
-   <li>Developed brick breaker game in Assembly Language.</br></li> 
-    <li>Designed and implemented a shell command line interpreter of Linux. </br></li> 
-</ul>
-</p>
-    <hr>
-<h2 style="color:Gray" > Languages </h2>
- <table width="500" border="10" height="100"  bgcolor="EEDCD9" vertical-align:middle BORDERCOLOR="#595858" BORDERCOLORLIGHT="#FCF7F7" BORDERCOLORDARK="#A9A9A9">
-  <tr>
-    <td>English</td>
-    
-  </tr>
-  <tr>
-    <td>Chinese</td>
-    
-  </tr>
-  <tr>
-    <td>Urdu</td>
-    
-  </tr>
-     <tr>
-    <td>French</td>
-    
-  </tr>
-</table>
-<hr>
-<h3 style="color:Gray"> Qualifications </h3>
-  <ul style="list-style-type:circle">
-      <p> <li>Bachelor of Science: Computer Science</br>
- Fast-NUCES Lahore, Pakistan <p> </li>
- <p><li>Intermediate:Computer Science                                                        2014 — 2016 </br>
-Kinnard College For Women Lahore, Pakistan <p> </li>
-    <hr>
-     
-     </div>
+ </style>
+<html>
+<body>
+<header>
+   Welcome!
+</header>
+   <div>
+        <section>
+            <div class="img"><img src="nimra.JPG" alt="Avatar"></div>
+            <article>
+                <button class="btn1 button">Skills</button>
+                <button class="btn2 button">Projects </button>
+                <button class="btn3 button">Languages</button>
+                <button class="btn4 button"> Qualifications </button>
+            </article>
+        </section>
+       </div>
+    <footer></footer>
     </body>
-    
+   
  
 
 </html>
