@@ -4,6 +4,8 @@
 <script>
         function f1(projects) {
             var x = document.getElementById("projects");
+            var audio = document.getElementById("audio");
+            audio.play();
         if (x.style.display === "none") {
         x.style.display = "block";
         } else {
@@ -12,6 +14,8 @@
     }
     function skill(skills) {
         var x = document.getElementById("skills");
+        var audio = document.getElementById("audio");
+        audio.play();
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -20,6 +24,8 @@
     }
     function language(lang) {
         var x = document.getElementById("lang");
+        var audio = document.getElementById("audio");
+        audio.play();
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -28,6 +34,8 @@
     }
     function Quali(Q) {
         var x = document.getElementById("Q");
+        var audio = document.getElementById("audio");
+        audio.play();
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -178,9 +186,11 @@
         </div>
         <section>
             <div class="img"><img src="nimra.JPG" alt="Avatar"></div>
-              
+            
                     <button class="btn1 button " onClick="skill(skills)">Skills</button>
+         
           <div id="skills" style="display:none">
+                 
               <ul style="list-style-type:circle">
                   <li>SQL </li>
                   <li>JAVA SCRIPT</li>
@@ -194,11 +204,11 @@
                   <li>Fast learner </li>
               </ul>
           </div>
-           
+
                 <button class="btn2 button" onClick="f1(projects)">Projects </button>
 
             <div id="projects" style="display:none;" >
-              
+
                 <br>
                 <br />
                 <br />
@@ -239,19 +249,20 @@
                 <button class="btn4 button" onclick="Quali(Q)"> Qualifications </button>
             <div id="Q" style="display:none;">
                 <ul style="list-style-type:circle">
-                    
+
                     <li>
                         Bachelor of Science: Computer Science.</br>
                         Fast-NUCES Lahore, Pakistan.
-                     
+
 
                     </li>
-                    
+
                     <li>
                         Intermediate:Computer Science                                                        2014 — 2016 </br>
                         Kinnard College For Women Lahore, Pakistan.
                     </li>
                     </ul>
+                <audio id="audio" src="16988_1461335349.mp3" type="audio/mpeg" />
             </div>
                 <!--</article>-->
                 <!--</div>-->
