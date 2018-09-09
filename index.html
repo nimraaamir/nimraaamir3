@@ -1,6 +1,41 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script>
+        function f1(projects) {
+            var x = document.getElementById("projects");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+        x.style.display = "none";
+        }
+    }
+    function skill(skills) {
+        var x = document.getElementById("skills");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function language(lang) {
+        var x = document.getElementById("lang");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function Quali(Q) {
+        var x = document.getElementById("Q");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
 <style>
     header {
         background-color: #FF360B;
@@ -10,21 +45,24 @@
         color: white;
     }
 
- footer {
-      background-color: #FF6F50;
-      color: white;
-      padding: 15px;
+    footer {
+        background-color: #FF6F50;
+        color: white;
+        padding: 15px;
     }
+
     img {
         border-radius: 50%;
-        border-color:black;
-        border-style:groove;
-        border-width:2px;
-        height:350px;
+        border-color: black;
+        border-style: groove;
+        border-width: 2px;
+        height: 350px;
     }
+
     s:hover {
         background-color: #FF6F50;
     }
+
     .img:hover {
         background-color: #FFFAF9;
         border-color: #FD3507;
@@ -39,12 +77,14 @@
 
 
     article {
-        -webkit-flex: 8;
-        -ms-flex: 3;
-        flex: 3;
+        -webkit-flex: 10;
+        -ms-flex: 10;
+        flex: 10;
         background-color: #FFEDED;
-        padding: 10px;
+        padding: 5px;
+        align-content: center;
     }
+
 
     .button {
         border: none;
@@ -66,50 +106,157 @@
         text-align: center;
         font-size: 16px;
     }
+
     .btn1 {
-        color: #E9443D;
+        background-color: #CF4D7A;
+    }
+    #skills {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: #FF360B;
+        margin-top: 20px;
+        color: #CF4D7A;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition-delay: 4s;
     }
     .btn2 {
-        color: aqua;
-      
+        background-color: aqua;
     }
+
     .btn3 {
-        color: #B051EE;
-        
+        background-color: #B051EE;
+    }
+    #Q {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: #FF360B;
+        margin-top: 20px;
+        color: #CFAF4D;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition-delay: 4s;
     }
     .btn4 {
-        color: #CFAF4D;
+        background-color: #CFAF4D;
     }
+
     .button:hover {
         background-color: white;
         color: black;
         border: 3px solid #FD160B;
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        align-content:center;
-        width:20%;
-        height:40%;
+        text-align: center;
+        width: 20%;
+        height: 40%;
     }
-    * {
-        box-sizing: border-box;
+
+
+
+    #projects {
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: #FF360B;
+        margin-top: 20px;
+        color:aqua;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        transition-delay:4s;
+       
     }
- 
+
  </style>
 <html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
-<header>
-   Welcome!
-</header>
-   <div>
+    <div class="container-fluid">
+        <header>
+            Welcome!
+        </header>
+        </div>
         <section>
             <div class="img"><img src="nimra.JPG" alt="Avatar"></div>
-            <article>
-                <button class="btn1 button">Skills</button>
-                <button class="btn2 button">Projects </button>
-                <button class="btn3 button">Languages</button>
-                <button class="btn4 button"> Qualifications </button>
-            </article>
-        </section>
-       </div>
+              
+                    <button class="btn1 button " onClick="skill(skills)">Skills</button>
+          <div id="skills" style="display:none">
+              <ul style="list-style-type:circle">
+                  <li>SQL </li>
+                  <li>JAVA SCRIPT</li>
+                  <li>JAVA</li>
+                  <li>C++</li>
+                  <li>C</li>
+                  <li>Windows and Linux</li>
+                  <li>ASP.NET</li>
+                  <li>Assembly language</li>
+                  <li>Excellent problem-solving abilities</li>
+                  <li>Fast learner </li>
+              </ul>
+          </div>
+           
+                <button class="btn2 button" onClick="f1(projects)">Projects </button>
+
+            <div id="projects" style="display:none;" >
+              
+                <br>
+                <br />
+                <br />
+               <p>
+                    <ul style="list-style-type:circle">
+                        <li>Created applications similar to notepad and paint in C++.</li>
+                        <li>Designed a website using PHP for online clothing with database using SQL.</br></li>
+                        <li>Developed brick breaker game in Assembly Language.</br></li>
+                        <li>Designed and implemented a shell command line interpreter of Linux. </br></li>
+                    </ul>
+                </p>
+            </div>
+            <!--</article>
+            <article>-->
+                <button class="btn3 button" onclick="language(lang)">Languages</button>
+            <div id="lang" style="display:none;">
+                <table width="500" border="10" height="100" bgcolor="EEDCD9" vertical-align:middle BORDERCOLOR="#595858" BORDERCOLORLIGHT="#FCF7F7" BORDERCOLORDARK="#A9A9A9">
+                    <tr>
+                        <td>English</td>
+
+                    </tr>
+                    <tr>
+                        <td>Chinese</td>
+
+                    </tr>
+                    <tr>
+                        <td>Urdu</td>
+
+                    </tr>
+                    <tr>
+                        <td>French</td>
+
+                    </tr>
+                </table>
+            </div>
+            <!--</article>
+            <article>-->
+                <button class="btn4 button" onclick="Quali(Q)"> Qualifications </button>
+            <div id="Q" style="display:none;">
+                <ul style="list-style-type:circle">
+                    
+                    <li>
+                        Bachelor of Science: Computer Science.</br>
+                        Fast-NUCES Lahore, Pakistan.
+                     
+
+                    </li>
+                    
+                    <li>
+                        Intermediate:Computer Science                                                        2014 — 2016 </br>
+                        Kinnard College For Women Lahore, Pakistan.
+                    </li>
+                    </ul>
+            </div>
+                <!--</article>-->
+                <!--</div>-->
+</section>
+    
     <footer></footer>
     </body>
    
