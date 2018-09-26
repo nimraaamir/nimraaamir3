@@ -1,65 +1,55 @@
 <!DOCTYPE html>
-
-
 <script>
-        function f1(projects) {
-            var x = document.getElementById("projects");
-            var audio = document.getElementById("audio");
-            audio.play();
-        if (x.style.display === "none") {
-        x.style.display = "block";
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var d = today.getDate();
+        var mo = today.getMonth() + 1;
+        var y = today.getFullYear();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML =
+            h + ":" + m + ":" + s;
+        document.getElementById("date").innerHTML = d + "/" + mo + "/" + y;
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) { i = "0" + i };
+        return i;
+    }
+    function validation() {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var emailReg = /^([w-.]+@([w-]+.)+[w-]{2,4})?$/;
+        if (name === '' || email === '') {
+            alert("Enter complete data");
+            return false;
+        } else if ((email).match(emailReg)==false) {
+            alert("Invalid Email Address.");
+            return false;
         } else {
-        x.style.display = "none";
+            return true;
         }
     }
-    function contact(cm) {
-        var x = document.getElementById("cm");
-        var audio = document.getElementById("audio");
-        audio.play();
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+    $.myfunction1 = function ()  {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        if (validation())
+        {
+            $("form[name='form_name']").submit(); 
+            alert("Message recieved. I will contact you soon.");
         }
-    }
-    function skill(skills) {
-        var x = document.getElementById("skills");
-        var audio = document.getElementById("audio");
-        audio.play();
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    function language(lang) {
-        var x = document.getElementById("lang");
-        var audio = document.getElementById("audio");
-        audio.play();
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    function Quali(Q) {
-        var x = document.getElementById("Q");
-        var audio = document.getElementById("audio");
-        audio.play();
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-    function openWin() {
-        window.open("https://www.facebook.com/nimra.aamir660");
+    });
+    myfunction()
+    {
+        $.myfunction1();
     }
 </script>
-
 <style>
     header {
-        background-color: #FF360B;
+        background-image: url('images.jpg');
         padding: 30px;
         text-align: center;
         font-size: 35px;
@@ -67,271 +57,163 @@
     }
 
     footer {
-        background-color: #FF6F50;
         color: white;
         padding: 15px;
+        background-image: url('images.jpg');
     }
 
-    img {
-        border-radius: 50%;
-        border-color: black;
-        border-style: groove;
-        border-width: 2px;
-        height: 350px;
-    }
-
-    s:hover {
-        background-color: #FF6F50;
-    }
-
-    .img:hover {
-        background-color: #FF360B;
-        border-color: #FD3507;
-        border-style: groove;
-    }
-
-    section {
-        display: -webkit-flex;
-        display: flex;
-        background-color: white;
-    }
-
-
-    article {
-        -webkit-flex: 10;
-        -ms-flex: 10;
-        flex: 10;
-        background-color: white;
-        padding: 5px;
-        align-content: center;
-    }
-
-
-    .button {
-        border: none;
+    .time {
         color: white;
-        padding: 30px;
-        text-decoration: none;
-        display: flex;
+        text-size-adjust: 20%;
+    }
+
+    input, button {
+        width: 150px;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    form {
+        position: relative;
+        width: 740px;
+        height: 498px;
+        margin: 0 auto;
         text-align: center;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        display: flex;
-        flex-wrap: wrap;
+        margin-bottom: 20px;
+        background: #FFF url(background.jpg);
+    }
+
+    body {
+        font: 21px sans-serif;
+        padding: 2em;
+        margin: 0;
+        background: #222;
+    }
+
+    #message {
+        position: center;
+    }
+
+    .email {
+        border-color: black;
+        color: burlywood;
+        text-align: center;
         height: 30%;
-        width: 10%;
-        border-radius: 50%;
-        text-align: center;
-        transition-duration: 0.5s;
-        text-align: center;
-        font-size: 16px;
+        width: 60%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 
-    }
-   
- 
-    .btn1 {
-        background-color: #CF4D7A;
-    }
-    #skills {
+    .msg {
+        border-color: black;
+        color: burlywood;
+        text-align: center;
+        height: 100%;
         width: 100%;
-        padding: 50px 0;
-        text-align: center;
-        background-color: white;
-        margin-top: 20px;
-        color: #CF4D7A;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        transition-delay: 4s;
-    }
-    .btn2 {
-        background-color: aqua;
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
 
-    .btn3 {
-        background-color: #B051EE;
+    .design {
+        max-width: 450px;
+        background-color: #ECECEC;
+        padding: 30px;
+        margin: 50px auto;
+        box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+        border: 6px solid black;
     }
-    #Q {
-        width: 100%;
-        padding: 50px 0;
-        text-align: center;
-        background-color: white;
-        margin-top: 20px;
-        color: #CFAF4D;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        transition-delay: 4s;
-    }
-    .btn4 {
-        background-color: #CFAF4D;
-    }
-    .btn6 {
-        background-image: url('fb.png');
 
-        -webkit-appearance: button;
-        -moz-appearance: button;
-       
-    }
-    .btn7 {
-        background-image: url('gmail.jpg');
-        
-    }
-    .button:hover {
-        background-color: white;
-        color: black;
-        border: 3px solid #FD160B;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-        text-align: center;
-        width: 20%;
-        height: 40%;
-    }
-    .btn5 {
-        background-color: blue;
-        animation-name: check;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
-    @keyframes check {
-        from {
-            background-color: blue;
-            height:50%;
-            width:40%;
-
-           background-image: url('fb.png');
+        .design ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            color:black;
         }
 
-        to {
-            background-color: cornflowerblue;
-            background-image: url('gmail.png');
-        }
-    }
+            .design ul li {
+                display: block;
+                margin-bottom: 10px;
+                min-height: 35px;
+            }
 
-    #projects {
-        width: 100%;
-        padding: 50px 0;
-        text-align: center;
-        background-color: white;
-        margin-top: 20px;
-        color:aqua;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        transition-delay:4s;
-       
-    }
+               
 
- </style>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <div class="container-fluid">
-        <header>
-           Nimra Aamir
-        </header>
-        </div>
-        <section>
-            <div class="img"><img src="nimra.JPG" alt="Avatar"></div>
-            
-                    <button class="btn1 button " onClick="skill(skills)">Skills</button>
-         
-          <div id="skills" style="display:none">
                  
-              <ul style="list-style-type:circle">
-                  <li>SQL </li>
-                  <li>JAVA SCRIPT</li>
-                  <li>JAVA</li>
-                  <li>C++</li>
-                  <li>C</li>
-                  <li>Windows and Linux</li>
-                  <li>ASP.NET</li>
-                  <li>Assembly language</li>
-                  <li>Excellent problem-solving abilities</li>
-                  <li>Fast learner </li>
-              </ul>
-          </div>
-
-                <button class="btn2 button" onClick="f1(projects)">Projects </button>
-
-            <div id="projects" style="display:none;" >
-
-                <br>
-                <br />
-                <br />
-               <p>
-                    <ul style="list-style-type:circle">
-                        <li>Created applications similar to notepad and paint in C++.</li>
-                        <li>Designed a website using PHP for online clothing with database using SQL.</br></li>
-                        <li>Developed brick breaker game in Assembly Language.</br></li>
-                        <li>Designed and implemented a shell command line interpreter of Linux. </br></li>
-                    </ul>
-                </p>
-            </div>
-            <!--</article>
-            <article>-->
-                <button class="btn3 button" onclick="language(lang)">Languages</button>
-            
-            <div id="lang" style="display:none;">
-                <br />
-                <br />
-                <br />
-                <br />
-                <table width="500" border="10" height="100" bgcolor="EEDCD9" vertical-align:middle BORDERCOLOR="#595858" BORDERCOLORLIGHT="#FCF7F7" BORDERCOLORDARK="#A9A9A9">
-                    <tr>
-                        <td>English</td>
-
-                    </tr>
-                    <tr>
-                        <td>Chinese</td>
-
-                    </tr>
-                    <tr>
-                        <td>Urdu</td>
-
-                    </tr>
-                    <tr>
-                        <td>French</td>
-
-                    </tr>
-                </table>
-            </div>
-            <!--</article>
-            <article>-->
-
-                <button class="btn4 button" onclick="Quali(Q)"> Qualifications </button>
-            <div id="Q" style="display:none;">
-                <ul style="list-style-type:circle">
-
-                    <li>
-                        Bachelor of Science: Computer Science.</br>
-                        Fast-NUCES Lahore, Pakistan.
 
 
-                    </li>
+        .design ul li textarea {
+            width: 100%;
+            height: 100px;
+        }
 
-                    <li>
-                        Intermediate:Computer Science                                                        2014 — 2016 </br>
-                        Kinnard College For Women Lahore, Pakistan.
-                    </li>
-                    </ul>
-                </div>
-                <button class="btn5 button " onclick="contact(cm)"> Contact me </button>
-            <div id="cm" style="display:none;">
-              
-                    
-                <form>
-                    <input type="button" class="btn6 button" value="F" onclick="openWin()">
-                </form>
+                .design ul li input[type="button"],
+                .designul li input[type="submit"] {
+                    border-color: #3A3A3A;
+                    border-width: thick;
+                    padding: 20px;
+                    text-decoration: none;
+                    display: flex;
+                    text-align: center;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: 30%;
+                    width: 12%;
+                    text-align: center;
+                    transition-duration: 0.5s;
+                    text-align: center;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    margin-top: 2px;
+                }
 
-                    <button class="btn7 button ">l164189@lhr.nu.edu.pk</button> 
+        .design ul li input[type="button"]:hover,
+        .design ul li input[type="submit"]:hover {
+            background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+            background-color: #28739E;
+        }
+</style>
+<html>
 
-                </div>
-                <audio id="audio" src="16988_1461335349.mp3" type="audio/mpeg" />
-
-                <!--</article>-->
-                <!--</div>-->
-</section>
-    
-    <footer></footer>
-    </body>
+<head>
    
- 
+    
+</head>
 
+    <body style="background-color:#ECECEC" onload="startTime()">
+
+        <div class="container" onload="showdate()">
+            <header>
+                Nimra Aamir
+
+                <div id="time"></div>
+                <div id="date"></div>
+            </header>
+        </div>
+
+
+   
+            <form class="design">
+                <ul>
+                    <li>
+                        <input type="text"  id="msg"class="align-left "placeholder="Name" />
+                        <input type="email" id="email" class="align-right" placeholder="Email" />
+                        <li />
+                   
+                   
+                    <li>
+<textarea name="field3" class="field-style" placeholder="Message"></textarea>
+                    </li>
+                    <li>
+                        <input type="submit" id="submit" value="Send Message" onclick="myfunction()" />
+                    </li>
+                </ul>
+            </form>
+    
+    </body>
 </html>
